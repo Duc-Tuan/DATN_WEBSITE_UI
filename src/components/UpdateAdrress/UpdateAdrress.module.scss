@@ -1,0 +1,51 @@
+.wapper {
+  .UpdateAddress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-black-opcity--008);
+    backdrop-filter: blur(6px);
+    z-index: 999;
+    .sub {
+      height: 100%;
+    }
+    .dataAddress {
+      min-width: 50%;
+      background: var(--bg-white);
+      box-shadow: var(--bg-black-bx-shadow);
+      border-radius: 4px;
+      padding: 20px;
+      .content {
+        .group {
+          input[type="text"] {
+            width: 100%;
+            outline: none;
+            padding: 4px 10px;
+            border: 1px solid var(--bg-black-opcity--01);
+            &.error {
+              border: 1px solid var(--bg-primary);
+            }
+          }
+          .mess {
+            color: var(--bg-primary);
+          }
+        }
+      }
+    }
+    .btn {
+      justify-content: flex-end;
+      button {
+        background: var(--bg-primary);
+        color: var(--bg-white);
+        box-shadow: var(--bg-black-bx-shadow);
+        &:nth-child(1) {
+          margin-right: 20px;
+          color: var(--bg-black);
+          background: var(--bg-white);
+        }
+      }
+    }
+  }
+}

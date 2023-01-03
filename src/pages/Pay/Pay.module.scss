@@ -1,0 +1,195 @@
+.wapper {
+  .pay {
+    .payUser {
+      box-shadow: var(--bg-black-bx-shadow);
+      .borders {
+        height: 3px;
+        width: 100%;
+        background-position-x: -30px;
+        background-size: 116px 3px;
+        background-image: repeating-linear-gradient(
+          45deg,
+          #6fa6d6,
+          #6fa6d6 33px,
+          transparent 0,
+          transparent 41px,
+          #f18d9b 0,
+          #f18d9b 74px,
+          transparent 0,
+          transparent 82px
+        );
+      }
+      .Address {
+        padding: 10px 20px;
+        .sub__title{
+          justify-content: space-between;
+          .Follow{
+            background: var(--bg-primary);
+            box-shadow: var(--bg-black-bx-shadow);
+            border-radius: 6px;
+            h6{
+              color: var(--bg-white);
+            }
+          }
+        }
+        .sub {
+          justify-content: flex-start;
+          svg {
+            font-size: 20px;
+          }
+          .Delivery {
+            font-weight: bold;
+          }
+        }
+        .nameUser,
+        .addressUser {
+          font-weight: bold;
+          margin-left: 10px;
+        }
+        .nameUser{
+          span{
+            padding: 0 10px;
+            &:nth-child(1){
+              border-right: 1px solid var(--bg-black-opcity--01);
+            }
+          }
+        }
+        .sub-420 {
+          justify-content: space-between;
+        }
+        .btnUpdate {
+          color: var(--bg-white);
+          background: var(--bg-primary);
+          box-shadow: var(--bg-black-bx-shadow);
+        }
+      }
+    }
+    .content {
+      padding: 10px 20px;
+      box-shadow: var(--bg-black-bx-shadow);
+      .pay__menu,
+      .pay__content {
+        justify-content: space-between;
+        .Name {
+          justify-content: flex-start;
+          flex: 3;
+          .img {
+            width: 100px;
+          }
+          .nameProduct {
+            word-wrap: break-word;
+            line-height: 2;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+          }
+        }
+        .Quantity,
+        .Monney,
+        .Manipulation {
+          flex: 1;
+          text-align: center;
+        }
+        .Quantity,
+        .Monney {
+          h6 {
+            font-size: 18px;
+            font-weight: 600;
+            &.colorPrimary {
+              color: var(--bg-primary);
+            }
+          }
+        }
+      }
+    }
+    .pay__product {
+      padding: 10px 20px;
+      box-shadow: var(--bg-black-bx-shadow);
+      .sub {
+        justify-content: space-between;
+      }
+      .totalMonney {
+        justify-content: flex-end;
+        .costs {
+          min-width: 300px;
+          .costName {
+            flex: 2;
+          }
+          .costPrice {
+            flex: 1;
+            font-size: 1em;
+            font-weight: bold;
+            color: var(--bg-primary);
+            margin-left: 10px;
+          }
+        }
+      }
+      .btnBuy {
+        color: var(--bg-white);
+        background: var(--bg-primary);
+        box-shadow: var(--bg-black-bx-shadow);
+        margin-left: 20px;
+        padding: 6px 40px;
+      }
+    }
+  }
+
+  .payNull {
+    min-height: 82vh;
+    flex-direction: column;
+    .message {
+      opacity: 0.8;
+    }
+    .btn {
+      background: var(--bg-primary);
+      color: var(--bg-white);
+      box-shadow: var(--bg-black-bx-shadow);
+    }
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .wapper {
+    .pay__product {
+      .totalMonney {
+        .costs {
+          min-width: 100% !important;
+        }
+      }
+      .btnBuy {
+        color: var(--bg-white);
+        background: var(--bg-primary);
+        box-shadow: var(--bg-black-bx-shadow);
+        margin-left: 20px;
+        padding: 6px 40px;
+      }
+    }
+    .payNull {
+      .message {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .wapper {
+    .sub-420 {
+      flex-wrap: wrap;
+      .btnUpdate {
+        padding: 4px 10px;
+        margin-top: 20px;
+      }
+    }
+    .checkbox {
+      label {
+        line-height: 2;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+      }
+    }
+  }
+}

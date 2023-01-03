@@ -1,0 +1,133 @@
+.wapper {
+  img {
+    height: 81.6vh;
+    position: relative;
+    left: 0;
+    top: 0;
+    right: 0;
+  }
+  .form {
+    color: var(--bg-black);
+    position: absolute;
+    top: 18%;
+    right: 20%;
+    max-width: 400px;
+    min-height: 580px;
+    padding: 10px 40px;
+    background: var(--bg-white-opcity);
+    backdrop-filter: blur(6px);
+    border-radius: 6px;
+    box-shadow: var(--bg-black-bx-shadow);
+    z-index: 10;
+    overflow: hidden;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -10%;
+      width: 200px;
+      height: 200px;
+      background: var(--bg-primary);
+      z-index: -1;
+      border-radius: 100%;
+      filter: blur(4px);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 10%;
+      right: 10%;
+      width: 100px;
+      height: 100px;
+      background: var(--bg-orange);
+      z-index: -1;
+      border-radius: 100%;
+      filter: blur(4px);
+    }
+    h4 {
+      text-align: center;
+    }
+    .group {
+      label {
+        font-weight: 600;
+        font-size: 17px;
+      }
+      input {
+        width: 100%;
+        outline: none;
+        padding: 4px 10px;
+        border-radius: 6px;
+        border: 1px solid transparent;
+        box-shadow: var(--bg-black-bx-shadow);
+      }
+      .mess {
+        width: 100%;
+        height: 30px;
+        overflow: hidden;
+      }
+      .error {
+        border: 1px solid red;
+      }
+      .errorMess {
+        color: red;
+      }
+    }
+    .btn {
+      width: 100%;
+      padding: 4px 10px;
+      border-radius: 6px;
+      box-shadow: var(--bg-black-bx-shadow);
+      color: var(--bg-white);
+      background: var(--bg-primary);
+    }
+    .suss {
+      color: rgb(28, 203, 72);
+    }
+    .error {
+      color: red;
+    }
+    .messError {
+      width: 100%;
+      height: 36px;
+      .error {
+        color: red;
+      }
+    }
+    .login {
+      .btnLogin {
+        color: var(--bg-primary);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .wapper {
+    .form {
+      right: 10%;
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .wapper {
+    .form {
+      padding: 6px 14px;
+      right: 0;
+      margin: 0 6px;
+      label,h6{
+        font-size: 14px !important;
+      }
+    }
+  }
+}
+@media screen and (max-width: 330px) {
+  .wapper {
+    img {
+      height: 100vh;
+    }
+    .form {
+      margin: 0 6px;
+      max-width: 300px;
+    }
+  }
+}

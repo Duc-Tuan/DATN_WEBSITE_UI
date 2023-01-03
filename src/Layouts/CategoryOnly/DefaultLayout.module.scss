@@ -1,0 +1,20 @@
+.wapper {
+  .sliderba{
+    background: var(--bg-black-opcity--008);
+    padding: 28px 0;
+    border-radius: 6px;
+    height: fit-content;
+  }
+  .banner {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .wapper {
+    .banner {
+      width: 90%;
+    }
+  }
+}

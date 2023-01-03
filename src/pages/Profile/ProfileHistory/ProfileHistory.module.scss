@@ -1,0 +1,83 @@
+.wapper {
+  .Menu {
+    justify-content: flex-start;
+    .BtnHistory {
+      &.active {
+        padding: 4px 20px;
+        border-radius: 0;
+        color: var(--bg-primary);
+        border-bottom: 2px solid var(--bg-primary);
+        h6 {
+          font-size: 18px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  .Content {
+    padding: 10px;
+    max-height: 160vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    &::-webkit-scrollbar{
+      display: none;
+    }
+    .products {
+      padding: 10px;
+      box-shadow: var(--bg-black-bx-shadow--001);
+      .product {
+        .sub {
+          border-radius: 6px;
+          background: var(--bg-black-opcity--008);
+          justify-content: space-between;
+        }
+        .img {
+          width: 100px;
+          height: 100px;
+        }
+        .info {
+          width: 100%;
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 0 20px;
+          .name {
+            h6 {
+              line-height: 2;
+              overflow: hidden;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 1;
+            }
+          }
+          .sub__pri {
+            width: 100%;
+            justify-content: space-between;
+          }
+          .price {
+            h6 {
+              color: var(--bg-primary);
+              text-align: end;
+            }
+          }
+        }
+      }
+    }
+    .sub__Status {
+      justify-content: space-between;
+      .total__monney {
+        span {
+          font-weight: bold;
+          color: var(--bg-primary);
+        }
+      }
+      .btnStatus {
+        background: var(--bg-primary);
+        color: var(--bg-white);
+        box-shadow: var(--bg-black-bx-shadow);
+      }
+      .finish {
+        color: rgb(1, 147, 13);
+      }
+    }
+  }
+}

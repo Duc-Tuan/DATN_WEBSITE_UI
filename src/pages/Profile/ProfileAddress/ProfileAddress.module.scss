@@ -1,0 +1,54 @@
+.wapper {
+  .info {
+    .sub__title {
+      justify-content: space-between;
+    }
+    .group {
+      .infoUser {
+        justify-content: flex-start;
+        .name,
+        .phone {
+          padding: 0 10px;
+        }
+        .name {
+          font-weight: bold;
+          border-right: 2px solid var(--bg-black-opcity--01);
+        }
+      }
+    }
+    .update {
+      .btnUpdate {
+        color: var(--bg-white);
+        background: var(--bg-primary);
+        box-shadow: var(--bg-black-bx-shadow);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wapper {
+    .info {
+      .group {
+        .infoUser {
+          justify-content: flex-start;
+        }
+      }
+      .sub__title {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .wapper {
+    h5 {
+      font-size: 16px;
+    }
+    h6 {
+      font-size: 14px;
+    }
+  }
+}

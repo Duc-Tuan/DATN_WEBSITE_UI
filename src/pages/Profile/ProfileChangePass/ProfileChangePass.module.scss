@@ -1,0 +1,72 @@
+.wapper {
+  .info {
+    width: 100%;
+    .group {
+      align-items: baseline;
+      .name {
+        width: 200px;
+      }
+      .content {
+        flex: 2;
+        input {
+          width: 100%;
+          outline: none;
+          border: 1px solid var(--bg-black-opcity--04);
+          padding: 4px 10px;
+          &.active {
+            border: 1px solid var(--bg-primary);
+          }
+        }
+        input[type="checkbox"] {
+          width: 14px;
+          height: 14px;
+        }
+        .error {
+          color: red;
+        }
+      }
+      .sub__showPass{
+        justify-content: flex-start;
+      }
+    }
+    .save {
+      position: absolute;
+      bottom: 20px;
+      left: 40px;
+      .btnSave {
+        box-shadow: var(--bg-black-bx-shadow);
+        background: var(--bg-primary);
+        color: var(--bg-white);
+        padding: 4px 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wapper {
+    .info {
+      .group {
+        .name {
+          width: 150px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .wapper {
+    h5 {
+      font-size: 18px;
+    }
+    h6 {
+      font-size: 14px;
+    }
+    .group{
+      .name{
+        width: 100px !important; 
+      }
+    }
+  }
+}

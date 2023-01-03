@@ -1,0 +1,85 @@
+.wapper {
+  .content__menu{
+    position: relative;
+  }
+  .top-4{
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .BtnMenu{
+    display: none;
+  }
+  .MenuProfile{
+    width: 20%;
+    padding-top: 16px;
+  }
+  .sub{
+    align-items: initial;
+  }
+  .content {
+    position: relative;
+    width: 80%;
+    min-height: 70vh;
+    background: var(--bg-white);
+    box-shadow: var(--bg-black-bx-shadow);
+    padding: 20px;
+    border-radius: 4px;
+  }
+  .BtnClose{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .wapper{
+    .top-4{
+      padding-top: 10px;
+      padding-bottom: 20px;
+    }
+    .sub{
+      width: 100%;
+      flex-direction: column;
+      .content{
+        width: 100%;
+      }
+    }
+    .BtnMenu{
+      display: inline;
+      .btn{
+        margin: 6px 0;
+        padding: 6px 16px;
+        display: inline-block;
+        background-color: var(--bg-primary-opcity);
+        border-radius: 4px;
+        color: var(--bg-white);
+        box-shadow: var(--bg-black-bx-shadow--001);
+      }
+    }
+    .MenuProfile{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -100%;
+      width: 240px;
+      padding-left: 14px;
+      background-color: var(--bg-white);
+      box-shadow: var(--bg-black-bx-shadow--001);
+      z-index: 1;
+      transition: 0.6s;
+      &.active{
+        left: 0;
+        transition: 0.6s;
+      }
+      .BtnClose{
+        margin: 10px;
+        padding: 0 10px;
+        border-radius: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: var(--bg-black-opcity--008);
+      }
+    }
+  }
+}

@@ -1,0 +1,135 @@
+.wapper {
+  .carts {
+    .cart__menu,
+    .cart__content,
+    .cart__pay {
+      justify-content: flex-start;
+      box-shadow: var(--bg-black-bx-shadow);
+      padding: 10px 20px;
+      .checkbox {
+        justify-content: flex-start;
+        flex: 1;
+        input {
+          width: 16px;
+          height: 16px;
+        }
+      }
+      .Price,
+      .Quantity,
+      .Monney,
+      .Manipulation {
+        flex: 3;
+        text-align: center;
+      }
+      .Name {
+        flex: 5;
+        .img {
+          width: 100px;
+        }
+        .nameProduct {
+          word-wrap: break-word;
+          line-height: 2;
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 1;
+        }
+      }
+      .Price {
+        font-weight: 600;
+        .pri {
+          color: var(--bg-primary);
+        }
+      }
+      .Quantity {
+        .sub {
+          justify-content: flex-start;
+          .btnQty {
+            font-size: 10px;
+            width: 30px;
+            height: 30px;
+            border: 1px solid var(--bg-black-opcity);
+          }
+          input[type="number"] {
+            text-align: center;
+            width: 60px;
+            height: 30px;
+            outline: none;
+            border: 1px solid var(--bg-black-opcity);
+          }
+        }
+      }
+    }
+    .cart__pay {
+      justify-content: space-between;
+      .btnBuy {
+        background: var(--bg-primary);
+        color: var(--bg-white);
+        box-shadow: var(--bg-black-bx-shadow);
+        margin-left: 20px;
+      }
+    }
+    .delete {
+      h6 {
+        color: red;
+      }
+    }
+  }
+  .cartNull {
+    height: 50vh;
+    .img {
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+    .name {
+      text-align: center;
+      color: var(--bg-black);
+      opacity: 0.5;
+      margin: 10px 0;
+    }
+    .btn {
+      background: var(--bg-primary);
+      box-shadow: var(--bg-black-bx-shadow);
+      color: var(--bg-white);
+    }
+  }
+  .productMore {
+    .nameMore {
+      opacity: 0.6;
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .wapper {
+    .carts {
+      .cart__menu,
+      .cart__content,
+      .cart__pay {
+        padding: 10px;
+      }
+      .Quantity {
+        input {
+          width: 34px !important;
+        }
+      }
+      .delete {
+        h6 {
+          font-size: 10px;
+        }
+      }
+      .cart__pay {
+        label,
+        .total_pay {
+          font-size: 14px !important;
+        }
+        .btnBuy{
+          margin: 0;
+          padding: 4px 20px;
+        }
+      }
+    }
+  }
+}

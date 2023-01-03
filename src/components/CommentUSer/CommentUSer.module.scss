@@ -1,0 +1,40 @@
+.wapper {
+  .sub {
+    justify-content: flex-start;
+    .infoUser {
+      .image {
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        border: 1px solid var(--bg-black-opcity--01);
+        img {
+          padding: 4px;
+        }
+      }
+    }
+    .time {
+      font-size: 10px;
+    }
+  }
+  .contentComment {
+    background: var(--bg-black-opcity--008);
+    box-shadow: var(--bg-black-bx-shadow--001);
+    padding: 4px 10px;
+    border-radius: 6px;
+    position: relative;
+    &::after{
+        content: "";
+        position: absolute;
+        top: -5px;
+        left: 20px;
+        border-top: 10px solid var(--bg-black-opcity--008);
+        border-left: 10px solid transparent;
+        transform: rotate(-45deg);
+        z-index: -1;
+    }
+  }
+  .commentNull{
+    height: 40px;
+    opacity: 0.8;
+  }
+}

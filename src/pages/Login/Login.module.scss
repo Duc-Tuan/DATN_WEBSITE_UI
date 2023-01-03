@@ -1,0 +1,125 @@
+.wapper {
+  img {
+    height: 81.6vh;
+    position: relative;
+    left: 0;
+    top: 0;
+    right: 0;
+  }
+  .form {
+    color: var(--bg-black);
+    position: absolute;
+    top: 30%;
+    right: 20%;
+    max-width: 400px;
+    min-height: 360px;
+    padding: 10px 40px;
+    background: var(--bg-white-opcity);
+    backdrop-filter: blur(2px);
+    border-radius: 6px;
+    box-shadow: var(--bg-black-bx-shadow);
+    z-index: 100;
+    overflow: hidden;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -10%;
+      width: 200px;
+      height: 200px;
+      background: var(--bg-primary);
+      z-index: -1;
+      border-radius: 100%;
+      filter: blur(4px);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 10%;
+      right: 10%;
+      width: 100px;
+      height: 100px;
+      background: var(--bg-orange);
+      z-index: -1;
+      border-radius: 100%;
+      filter: blur(4px);
+    }
+    h4 {
+      text-align: center;
+    }
+    .group {
+      label {
+        font-weight: 600;
+        font-size: 17px;
+      }
+      input {
+        width: 100%;
+        outline: none;
+        padding: 4px 10px;
+        border-radius: 6px;
+        box-shadow: var(--bg-black-bx-shadow);
+      }
+    }
+    .btn {
+      width: 100%;
+      padding: 4px 10px;
+      border-radius: 6px;
+      box-shadow: var(--bg-black-bx-shadow);
+      color: var(--bg-white);
+      background: var(--bg-primary);
+    }
+    .messError {
+      width: 100%;
+      height: 50px;
+      .error {
+        color: red;
+      }
+    }
+    .register,
+    .Forgot {
+      justify-content: flex-start;
+      .btnRegister,
+      .btnForgot {
+        color: var(--bg-primary);
+      }
+      .btnForgot{
+        padding: 4px 0;
+        &:hover{
+          border-radius: 0;
+          border-bottom: 1px solid var(--bg-primary);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .wapper {
+    .form {
+      max-width: 300px;
+      right: 20%;
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .wapper {
+    .form {
+      padding: 6px 16px;
+      top: 26%;
+      right: 10%;
+      label{
+        font-size: 14px !important;
+      }
+      h6{
+        font-size: 14px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 330px) {
+  .wapper {
+    .form {
+      right: 3%;
+    }
+  }
+}

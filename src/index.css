@@ -1,13 +1,123 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+}
+
+:root {
+  --bg-body: rgba(207, 207, 207, 0.1);
+  --bg-primary: #ee4d2d;
+  --bg-white: #fff;
+  --bg-black: #000;
+  --bg-orange: rgb(255, 174, 62);
+  --bg-suss: rgba(10, 255, 26, 0.5);
+  --bg-white-opcity: rgba(255, 255, 255, 0.5);
+  --bg-black-opcity: rgba(0, 0, 0, 0.4);
+  --bg-black-opcity--008: rgba(0, 0, 0, 0.04);
+  --bg-black-opcity--01: rgba(0, 0, 0, 0.1);
+  --bg-black-opcity--04: rgba(0, 0, 0, 0.4);
+  --bg-primary-opcity: rgba(238, 77, 45, 0.8);
+  --bg-primary-opcity--5: rgba(238, 77, 45, 0.5);
+  --bg-black-bx-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  --bg-black-bx-shadow--001: 1px 1px 4px rgba(0, 0, 0, 0.1);
+}
+.opcity-09 {
+  opacity: 0.9;
+}
+.opcity-08 {
+  opacity: 0.8;
+}
+.opcity-07 {
+  opacity: 0.7;
+}
+.opcity-06 {
+  opacity: 0.6;
+}
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    -45deg,
+    rgb(255, 156, 42),
+    transparent,
+    var(--bg-primary)
+  );
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bg-primary);
+}
+
+body {
+  background: var(--bg-body);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root {
+  overflow-x: hidden;
+}
+
+#root::-webkit-scrollbar {
+  display: none;
+}
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.p0 {
+  padding: 0 !important;
+}
+
+.m0 {
+  margin: 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.dfcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+.pagination li a {
+  background: var(--bg-black-opcity--008);
+  box-shadow: var(--bg-black-bx-shadow);
+  margin: 0 10px;
+  border-radius: 4px;
+  padding: 4px 10px;
+  transition: 0.4s;
+}
+.pagination li a:hover {
+  background: var(--bg-primary);
+  color: var(--bg-white);
+  transition: 0.4s;
+}
+.pagination li a.active {
+  color: var(--bg-white);
+  background: var(--bg-primary);
 }

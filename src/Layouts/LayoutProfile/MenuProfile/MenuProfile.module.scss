@@ -1,0 +1,101 @@
+.wapper {
+  margin-right: 10px;
+  .title {
+    justify-content: flex-start;
+    .image {
+      width: 60px;
+      height: 60px;
+      border-radius: 100%;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        transform-origin: bottom right;
+        background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+        animation: animation 6s linear infinite;
+        z-index: -1;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        transform-origin: bottom right;
+        background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+        animation: animation 6s linear infinite;
+        animation-delay: -3s;
+        z-index: -1;
+      }
+      .img {
+        border-radius: 100%;
+        position: absolute;
+        inset: 2px;
+        background-color: var(--bg-primary);
+        .avatarNull {
+          height: 100%;
+          svg {
+            color: var(--bg-white);
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    .nameUser {
+      span {
+        opacity: 0.6;
+      }
+    }
+  }
+  .my_profile {
+    .menu__sub {
+      padding-left: 30px;
+      button {
+        width: 100%;
+        justify-content: flex-start;
+        transition: 0.4s;
+        &:hover {
+          color: var(--bg-primary);
+          background-color: var(--bg-black-opcity--008);
+          transition: 0.4s;
+        }
+      }
+      .active {
+        color: var(--bg-primary);
+      }
+    }
+  }
+  .history_buy {
+    .active {
+      color: var(--bg-primary);
+    }
+  }
+}
+
+@keyframes animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .wapper{
+    h6{
+      font-size: 14px;
+    }
+  }
+}
